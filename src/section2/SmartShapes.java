@@ -24,6 +24,14 @@ public class SmartShapes {
 
     	
     		// 7. Change steps 4 and 5 to draw a different shape (e.g. triangle (3-sides), pentagon (5-sides), decagon (10-sides)).
+   Robot m=new Robot("batman");
+   m.penDown();
+   m.setSpeed(100000);
+   for(int  i=0; i<5; i++) {
+	   m.setRandomPenColor();
+	  m.move(200);
+	  m.turn(72);
+   }
    
     }
 }
