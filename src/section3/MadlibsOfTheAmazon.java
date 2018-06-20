@@ -5,6 +5,17 @@ import javax.swing.JOptionPane;
 public class MadlibsOfTheAmazon {
 	
 	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null,"If you find yourself having to cross a piranha-infested river, here's how to do it...");
+		String Adjective= JOptionPane.showInputDialog("Enter an adjective");
+		String Liquid= JOptionPane.showInputDialog("Enter a type of liquid");
+		String BodyPart= JOptionPane.showInputDialog("Enter a body part");
+		String Verb= JOptionPane.showInputDialog("Enter a verb");
+		String Place= JOptionPane.showInputDialog("Enter a Place");
+		JOptionPane.showMessageDialog(null,"Piranha's are more" +  Adjective + 
+				"during the day, so cross the river at night. Piranhas are attracted to fresh" + Liquid + 
+				"and will most likely take a bike out of your" + BodyPart + "if you" + Verb + ".Whatever" +
+			 "you do, if you have an open wound, try to find another way to get" +
+				"back to the" + Place + ".Good luck!");
 		// Put this sentence in a pop up:
 		// If you find yourself having to cross a piranha-infested river, here's how to do it...
 		

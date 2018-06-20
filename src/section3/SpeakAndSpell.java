@@ -8,6 +8,12 @@ import com.sun.speech.freetts.VoiceManager;
 public class SpeakAndSpell {
 
 	public static void main(String[] args) {
+		speak("spell Russian computer");
+		String m= JOptionPane.showInputDialog("Answer");
+		if(answer==0) {
+			JOptionPane.showConfirmDialog(parentComponent, message)
+		}
+		
 		// 1. Use the speak method to say the word. "e.g. spell mandlebrot"
 
 		// 2. Catch the user's answer in a String
