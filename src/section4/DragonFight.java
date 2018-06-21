@@ -5,12 +5,50 @@ import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 
 public class DragonFight {
-	// 1. Create a main method and put all of the code below inside of it
 	public static void main(String[] args) {
 		
 		ImageIcon dragon = new ImageIcon("src/section4/dragonPicture.jpg");		
 		
 		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
+		int playerHealth=100;
+		int dragonHealth=100;
+		int playerDamage=0;
+		int dragonDamage=0;
+		while(playerHealth>0 && dragonHealth>0) { 
+			for(int i=0;i<75;i++) {
+		String ans=JOptionPane.showInputDialog("Do you want to kick or yell?");
+		if (ans.equals("yell")) {
+			int yell=new Random().nextInt(6)+10;
+			dragonDamage=dragonDamage+ yell ;
+			dragonHealth=dragonHealth- yell;
+			}
+		if (ans.equals("kick")) {
+			int kick=new Random().nextInt(35);
+			dragonDamage=dragonDamage+ kick;
+			dragonHealth=dragonHealth- kick;
+			}
+		int fire= new Random().nextInt(1)+13;
+		playerDamage=playerDamage+ fire;
+		playerHealth=playerHealth- fire;
+		
+		JOptionPane.showMessageDialog(null, "Dragon Health=" + dragonHealth +
+				 "Your Health=" + playerHealth
+				);
+	
+		if (playerHealth<0) {
+			JOptionPane.showMessageDialog(null, "YOU LOSE");
+			System.exit(0);
+		} 
+		if (dragonHealth<0) {
+			JOptionPane.showMessageDialog(null, "YOU WIN");
+			System.exit(0);
+			
+		}
+		}
+	// 1. Create a main method and put all of the code below inside of it
+
+	
+
 		// 2. Create a variable called "playerHealth" to store your health (set it equal to 100)
 	
 		// 3. Create a variable called "dragonHealth" to store the dragon's health (set it equal to 100)
@@ -21,7 +59,7 @@ public class DragonFight {
 		
 		
 		// 6.  Delete the slashes at the beginning of the next line.  
-		//while(playerHealth>0 && dragonHealth>0) {    //this line of code keeps the battle going until someone's health reaches 0 
+		  //this line of code keeps the battle going until someone's health reaches 0 
 		
 		// 7. Add a closing mustache at the very bottom of this program (since we just added an opening mustache on the previous step).
 		
@@ -29,13 +67,13 @@ public class DragonFight {
 		
 		// 9. If they typed in "yell":
 		
-			//-- Find a random number between 0 and 10 and store it in dragonDamage
+			//-- Find a random number between 10 and 15 and store it in dragonDamage
 			
 			//-- Subtract that number from the dragon's health variable 
 			
 		// 10. If they typed in "kick":
 		
-			//-- Find a random number between 0 and 25 and store it in dragonDamage
+			//-- Find a random number between 0 and 35 and store it in dragonDamage
 			
 			//-- Subtract that number from the dragon's health variable
 			
@@ -62,4 +100,6 @@ public class DragonFight {
 			
 		}
 	}
+}
+
 
